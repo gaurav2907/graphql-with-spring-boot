@@ -9,8 +9,10 @@ type Vehicle {
 type Query {
 	vehicles(count: Int):[Vehicle]
 	vehicle(id: ID):Vehicle
+	vehicle1(brandName: String):[Vehicle]
 }
 
+
 type Mutation {
-	createVehicle(type: String!, modelCode: String!, brandName: String, launchDate: String):Vehicle
+	createVehicle(type: String!, modelCode: String!, brandName: String!, launchDate: String):Vehicle
 }

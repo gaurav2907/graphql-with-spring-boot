@@ -31,11 +31,21 @@ public class VehicleService {
 
     @Transactional(readOnly = true)
     public List<Vehicle> getAllVehicles(final int count) {
+    	System.out.println("Get All vehicles");
+
         return this.vehicleRepository.findAll().stream().limit(count).collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
     public Optional<Vehicle> getVehicle(final int id) {
+    	System.out.println("get Vehicle by Id");
+
         return this.vehicleRepository.findById(id);
+    }
+    
+    @Transactional(readOnly = true)
+    public List<Vehicle> getVehicleByname(final String brandName) {
+    	System.out.println("in brnad Name query");
+        return this.vehicleRepository.findByBrandName(brandName);
     }
 }

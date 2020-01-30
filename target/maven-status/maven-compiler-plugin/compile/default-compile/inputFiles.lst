@@ -1,0 +1,6 @@
+/Users/gauravbansal/eclipse-workspace/graphql-with-spring-boot/src/main/java/com/techshard/graphql/service/VehicleService.java
+/Users/gauravbansal/eclipse-workspace/graphql-with-spring-boot/src/main/java/com/techshard/graphql/mutation/VehicleMutation.java
+/Users/gauravbansal/eclipse-workspace/graphql-with-spring-boot/src/main/java/com/techshard/graphql/dao/repository/VehicleRepository.java
+/Users/gauravbansal/eclipse-workspace/graphql-with-spring-boot/src/main/java/com/techshard/graphql/query/VehicleQuery.java
+/Users/gauravbansal/eclipse-workspace/graphql-with-spring-boot/src/main/java/com/techshard/graphql/Application.java
+/Users/gauravbansal/eclipse-workspace/graphql-with-spring-boot/src/main/java/com/techshard/graphql/dao/entity/Vehicle.java
