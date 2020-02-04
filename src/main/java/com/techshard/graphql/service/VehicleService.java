@@ -1,6 +1,7 @@
 package com.techshard.graphql.service;
 
 import com.techshard.graphql.dao.entity.Vehicle;
+import com.techshard.graphql.dao.entity.VehicleStatus;
 import com.techshard.graphql.dao.repository.VehicleRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,13 +21,14 @@ public class VehicleService {
     }
 
     @Transactional
-    public Vehicle createVehicle(final String type,final String modelCode, final String brandName, final String launchDate) {
+    public Vehicle createVehicle(final String type,final String modelCode, final String brandName, final String launchDate, final VehicleStatus status) {
         final Vehicle vehicle = new Vehicle();
         vehicle.setType(type);
         vehicle.setModelCode(modelCode);
         vehicle.setBrandName(brandName);
         vehicle.setLaunchDate(LocalDate.parse(launchDate));
-        return this.vehicleRepository.save(vehicle);
+        vehicle.setStatus(status);
+        return this.vehicleRepository.save(vehicle); 
     }
 
     @Transactional(readOnly = true)

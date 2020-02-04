@@ -33,8 +33,19 @@ public class Vehicle implements Serializable {
 
     @Column(name = "launch_date")
     private LocalDate launchDate;
+    
+    @Column(name = "status")
+    private VehicleStatus status;
 
-    public LocalDate getLaunchDate() {
+    public VehicleStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(VehicleStatus status) {
+		this.status = status;
+	}
+
+	public LocalDate getLaunchDate() {
 		return launchDate;
 	}
 
@@ -85,3 +96,5 @@ public class Vehicle implements Serializable {
 		this.formattedDate = formattedDate;
 	}
   }
+
+

@@ -3,7 +3,8 @@ type Vehicle {
 	type: String,
 	modelCode: String,
 	brandName: String,
-	launchDate: String
+	launchDate: String,
+	status: VehicleStatus
 }
 
 type Query {
@@ -14,5 +15,10 @@ type Query {
 
 
 type Mutation {
-	createVehicle(type: String!, modelCode: String!, brandName: String!, launchDate: String):Vehicle
+	createVehicle(type: String!, modelCode: String!, brandName: String!, launchDate: String, status: VehicleStatus):Vehicle
+}
+
+enum VehicleStatus {
+    ACTIVE
+    INACTIVE
 }
