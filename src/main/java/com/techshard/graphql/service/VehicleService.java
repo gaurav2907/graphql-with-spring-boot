@@ -5,8 +5,6 @@ import com.techshard.graphql.dao.entity.Status;
 import com.techshard.graphql.dao.repository.VehicleRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
 
 import java.time.LocalDate;
 import java.util.List;

@@ -1,7 +1,5 @@
 package com.techshard.graphql.service;
 
-import java.beans.PropertyEditorSupport;
-
 import javax.persistence.AttributeConverter;
 import javax.persistence.Converter;
 import com.techshard.graphql.dao.entity.Status;

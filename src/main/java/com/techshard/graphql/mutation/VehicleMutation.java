@@ -7,8 +7,6 @@ import com.techshard.graphql.service.VehicleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDate;
-
 @Component
 public class VehicleMutation implements GraphQLMutationResolver {
 
