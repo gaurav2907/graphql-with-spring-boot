@@ -6,6 +6,10 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+
+import com.techshard.graphql.service.VehicleConverter;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -34,14 +38,16 @@ public class Vehicle implements Serializable {
     @Column(name = "launch_date")
     private LocalDate launchDate;
     
-    @Column(name = "status")
-    private VehicleStatus status;
+    @Convert(converter = VehicleConverter.class)
+    @Column(name = "status", nullable = false)
+    @NotNull
+    private Status status;
 
-    public VehicleStatus getStatus() {
+    public Status getStatus() {
 		return status;
 	}
 
-	public void setStatus(VehicleStatus status) {
+	public void setStatus(Status status) {
 		this.status = status;
 	}
 

@@ -1,6 +1,6 @@
 package com.techshard.graphql.dao.entity;
 
-public enum VehicleStatus {
+public enum Status {
 
 
 	ACTIVE, INACTIVE
