@@ -22,4 +22,5 @@ type Mutation {
 enum Status {
     ACTIVE
     INACTIVE
+    SUSPENDED
 }
